@@ -1,0 +1,20 @@
+html { 
+    overflow-y:scroll; 
+}
+
+body { 
+    padding-top:50px; 
+}
+        
+#todo-list { 
+    margin-bottom:30px; 
+}
+
+.active-false {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.active-true {
+    text-decoration: none;
+}
