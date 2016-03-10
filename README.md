@@ -14,13 +14,13 @@ A simple todo app built with the MEAN (MongoDB, Express, Angular, Node) stack.
 
 ## Installation
 
-1. Clone the repository: `git clone git@github.com:scotch-io/node-todo`
+1. Clone the repository: `git clone git@github.com:shreyasanand/my_todo_app`
 2. Install the application: `npm install`
 3. Start the server: `node server.js`
 4. View in browser at `http://localhost:3000`
 
 ## App features
 
-1. Add a todo
-2. Mark a todo as completed/ Unmark a todo as still active (toggle state)
-3. Delete a todo
+1. Add a todo.
+2. Mark an active todo as completed/ Unmark a completed todo as active (toggle state).
+3. Delete a todo.
