@@ -2,7 +2,7 @@
     
 angular.module('todoController', [])
 
-    // inject the Todo service factory into our controller
+    // inject the Todo service factory and isEmptyObjectFilter into our controller
     .controller('mainController', function($scope, $http, Todos, isEmptyObjectFilter) {
         $scope.formData = {};
     
