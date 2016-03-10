@@ -26,7 +26,7 @@
 
         <!-- HEADER AND TODO COUNT -->
         <div class="jumbotron text-center">
-            <h1>I'm a Todo-aholic <span class="label label-info">{{ todos.length }}</span></h1>
+            <h1>My Todo list <span class="label label-info">{{ todos.length }}</span></h1>
         </div>
 
         <!-- TODO LIST -->
@@ -37,6 +37,7 @@
                 <div class="checkbox" ng-repeat="todo in todos">
                     <label class="active-{{todo.active}}">{{ todo.text }}</label>
                     <input type="checkbox" ng-click="toggleTodo(todo._id)">
+                    <span class="glyphicon glyphicon-trash" ng-click="deleteTodo(todo._id)" aria-hidden="true"></span>
                 </div>
 
             </div>
@@ -49,7 +50,7 @@
                     <div class="form-group">
 
                         <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-                        <input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
+                        <input type="text" class="form-control input-lg text-center" placeholder="What needs to be done?" ng-model="formData.text">
                     </div>
 
                     <!-- createToDo() WILL CREATE NEW TODOS -->
