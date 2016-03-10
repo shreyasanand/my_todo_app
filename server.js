@@ -11,7 +11,7 @@
 
     // configuration ======================================================================
     
-    mongoose.connect(database.urlLocal || database.urlHeroku);     // connect to mongoDB database
+    mongoose.connect(database.urlHeroku);     // connect to mongoDB database
     app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
     app.use(morgan('dev'));                                         // log every request to the console
     app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
