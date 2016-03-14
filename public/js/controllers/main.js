@@ -3,15 +3,16 @@
 angular.module('todoController', [])
 
     // inject the Todo service factory and isEmptyObjectFilter into our controller
-    .controller('mainController', function($scope, $http, Todos, isEmptyObjectFilter) {
+    .controller('mainController', function($scope, Todos, isEmptyObjectFilter) {
         $scope.formData = {};
+        $scope.todos = [];
     
         // GET =====================================================================
         // when landing on the page, get all todos and show them
         Todos.get()
             .success(function(data) {
                 $scope.todos = data;
-                console.log(data);
+                console.log($scope.todos);
             })
             .error(function(data) {
                 console.log('Error: ' + data);
@@ -26,9 +27,9 @@ angular.module('todoController', [])
              
                 Todos.create($scope.formData)
                     .success(function(data) {
-                    $scope.formData = {}; // clear the form so our user is ready to enter another
-                    $scope.todos = data; // assign our new list of todos
-                    console.log(data);
+                        $scope.formData = {}; // clear the form so our user is ready to enter another
+                        $scope.todos = data; // assign our new list of todos
+                        console.log(data);
                     })
                     .error(function(data) {
                         console.log('Error: ' + data);
